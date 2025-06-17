@@ -10,7 +10,10 @@ app.get("/", (req, res) => {
 app.post("/hooks/catch/:userId/:zapId", (req, res) => {
   const userId = req.params.userId;
   const zapId = req.params.zapId;
-  console.log(`Received hook for user ${userId} and zap ${zapId}`);
+
+  // store db in new trigger
+
+  // push it on to a queue (kaflka/redis)
 });
 
 app.listen(port, () => {
